@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Management</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./asset/images/logo.png" alt="Logo" />
+            <h2>Hotel<span class="danger">Manager</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="index.html">
+            <span class="material-icons-sharp"> dashboard </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="organization.html">
+            <span class="material-icons-sharp"> group </span>
+            <h3>Organizations</h3>
+          </a>
+          <a href="food-order.html">
+            <span class="material-icons-sharp"> restaurant </span>
+            <h3>Food Orders</h3>
+          </a>
+          <a href="invoicing.html">
+            <span class="material-icons-sharp"> receipt_long </span>
+            <h3>Invoices</h3>
+          </a>
+          <a href="expense.html" class="active">
+            <span class="material-icons-sharp"> money_off </span>
+            <h3>Expenses</h3>
+          </a>
+          <a href="reports.html">
+            <span class="material-icons-sharp"> assessment </span>
+            <h3>Reports</h3>
+          </a>
+          <a href="profile.html">
+            <span class="material-icons-sharp"> settings </span>
+            <h3>Settings</h3>
+          </a>
+        </div>
+      </aside>
+
+      <main>
+        <h1>Expense Management</h1>
+        <form id="expense-form">
+          <label for="expense-category">Category:</label>
+          <input type="text" id="expense-category" required />
+          <label for="expense-amount">Amount:</label>
+          <input type="number" id="expense-amount" required />
+          <label for="expense-date">Date:</label>
+          <input type="date" id="expense-date" required />
+          <button type="submit">Add Expense</button>
+        </form>
+      </main>
+
+      <div class="right">
+        <div class="top">
+          <button id="menu-btn">
+            <span class="material-icons-sharp"> menu </span>
+          </button>
+          <div class="theme-toggler">
+            <span class="material-icons-sharp active"> light_mode </span>
+            <span class="material-icons-sharp"> dark_mode </span>
+          </div>
+          <div class="profile">
+            <div class="info">
+              <p>Hey, <b>Admin</b></p>
+              <small class="text-muted">Manager</small>
+            </div>
+            <div class="profile-photo">
+              <img src="/asset/images/profile-1.jpg" alt="Profile Picture" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/asset/js/index.js"></script>
+  </body>
+</html>
