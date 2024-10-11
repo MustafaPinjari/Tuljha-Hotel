@@ -91,12 +91,25 @@ const buildSalesAnalytics = (element) => {
     element.appendChild(item);
   }
 };
-
 // Document operation functions
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const themeToggler = document.querySelector(".theme-toggler");
+
+// Function to apply the theme based on localStorage value
+function applyTheme() {
+  const isDarkMode = localStorage.getItem("theme") === "dark";
+  if (isDarkMode) {
+    document.body.classList.add("dark-theme-variables");
+    themeToggler.querySelector("span:nth-child(2)").classList.add("active"); // Dark mode icon active
+    themeToggler.querySelector("span:nth-child(1)").classList.remove("active"); // Light mode icon inactive
+  } else {
+    document.body.classList.remove("dark-theme-variables");
+    themeToggler.querySelector("span:nth-child(1)").classList.add("active"); // Light mode icon active
+    themeToggler.querySelector("span:nth-child(2)").classList.remove("active"); // Dark mode icon inactive
+  }
+}
 
 // Show Sidebar
 menuBtn.addEventListener("click", () => {
@@ -108,13 +121,26 @@ closeBtn.addEventListener("click", () => {
   sideMenu.style.display = "none";
 });
 
-// Change Theme
+// Toggle theme and save preference in localStorage
 themeToggler.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme-variables");
+  const isDarkMode = document.body.classList.toggle("dark-theme-variables");
 
-  themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
-  themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
+  if (isDarkMode) {
+    localStorage.setItem("theme", "dark");
+    themeToggler.querySelector("span:nth-child(2)").classList.add("active");
+    themeToggler.querySelector("span:nth-child(1)").classList.remove("active");
+  } else {
+    localStorage.setItem("theme", "light");
+    themeToggler.querySelector("span:nth-child(1)").classList.add("active");
+    themeToggler.querySelector("span:nth-child(2)").classList.remove("active");
+  }
 });
+
+// Apply theme on page load based on the stored preference
+window.addEventListener("load", () => {
+  applyTheme(); // Apply the theme when the page loads
+});
+
 
 // Sample data for organizations and invoices
 let organizations = []
@@ -200,3 +226,7 @@ document.getElementById('add-organization-btn').addEventListener('click', () => 
 
 // Initial render
 renderOrganizations();
+
+
+// calculator
+

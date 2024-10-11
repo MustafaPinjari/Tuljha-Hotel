@@ -41,7 +41,9 @@ form#organization-form {
   box-shadow: var(--box-shadow);
   width: 400px;
   display: flex;
-  flex-direction: column;
+   flex-direction: column; 
+  margin-left: 300px;
+  margin-top: 80px;
 }
 
 form#organization-form label {
@@ -85,4 +87,21 @@ form#organization-form button[type="submit"]:hover {
 
 form#organization-form button[type="submit"]:focus {
   outline: none;
+}
+
+
+table {
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 5px;
+  border: #000000 solid 1px;
+}
+
+  
+table th {
+color: #000000;
+background: var(--color-dark);
+}
+button#download-btn {
+  margin-top: 2rem;
 }

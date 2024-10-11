@@ -1,0 +1,124 @@
+/* Root Colors */
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+  
+    --box-shadow: 0 2rem 3rem var(--color-light);
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit width for better appearance */
+}
+
+#expense-list {
+    margin-top: 2rem;
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit width for better appearance */
+}
+
+  
+  main h1 {
+    margin-bottom: 2rem;
+  }
+  
+
+  
+  form label {
+    grid-column: 1 / 3;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  form input,
+  form button {
+    padding: 0.8rem;
+    border: 1px solid var(--color-info-dark);
+    border-radius: var(--border-radius-2);
+    font-size: 1rem;
+    
+  }
+  
+  form button {
+    width: 150px;
+    grid-column: 1 / 3;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: var(--color-primary-variant);
+  }
+  
+
+  
+  #expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #expenses-table th,
+  #expenses-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-light);
+  }
+  
+  #expenses-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: left;
+  }
+  
+  #expenses-table tr:hover {
+    background-color: var(--color-light);
+  }
+  
+  .delete-btn {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+  }
+  
+  
+  

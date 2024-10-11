@@ -7,6 +7,7 @@
     <title>Food Order Management</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <link rel="stylesheet" href="/asset/css/style.css" />
+    <link rel="stylesheet" href="/asset/css/food-order.css">
   </head>
   <body>
     <div class="container">
@@ -54,21 +55,27 @@
       </aside>
 
       <main>
-        <h1>Food Order Management</h1>
-        <form id="food-order-form">
+        <form id="food-order-form" class="form-container">
+          <h1>Food Order Management</h1>
           <label for="organization">Select Organization:</label>
           <select id="organization" required>
             <!-- Options will be populated here -->
           </select>
+      
           <label for="people-served">Number of People Served:</label>
           <input type="number" id="people-served" required />
+      
           <label for="food-items">Food Items Ordered:</label>
           <input type="text" id="food-items" required />
+      
           <label for="total-cost">Total Cost:</label>
           <input type="number" id="total-cost" required />
+      
           <button type="submit">Submit Order</button>
         </form>
       </main>
+      
+      
 
       <div class="right">
         <div class="top">
