@@ -23,16 +23,7 @@
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+
 
 form#organization-form {
   background-color: var(--color-white);
